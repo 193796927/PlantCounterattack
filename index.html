@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Counter Attack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="i18n.js"></script>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container nav-content">
+            <div class="logo">
+                <div class="logo-icon">
+                    <img src="./src/images/icon.png" alt="Game Icon">
+                </div>
+                <div class="logo-text" data-i18n="GameName">Plant Counter Attack</div>
+            </div>
+            
+            <div class="nav-links">
+                <a href="#home" class="nav-link active" data-i18n="nav.home">Home</a>
+                <a href="#screenshots" class="nav-link" data-i18n="nav.screenshots">Screenshots</a>
+                <!-- <a href="#community" class="nav-link" data-i18n="nav.community">Community</a> -->
+            </div>
+            
+            <!-- <button class="download-btn" onclick="downloadGame()" data-i18n="nav.download">
+                Download Now
+            </button> -->
+            
+            <!-- 语言切换下拉框 -->
+            <div class="language-switcher" id="languageSwitcher">
+                <select class="lang-select" id="langSelect">
+                    <option value="zh">中文</option>
+                    <option value="en" selected>English</option>
+                </select>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero区域 -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1 class="hero-title delay-2" id="main-title">PLANT <span>COUNTER ATTACK</span></h1>
+                <p class="hero-description delay-3" id="hero-description" data-i18n="hero.description">
+                    An innovative plant strategy defense game where plants and invaders clash in intense battles. 
+                    Cultivate unique plants, build defense positions, and protect your homeland in this thrilling gaming experience.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Vimeo视频嵌入 -->
+        <div class="video-container fade-in delay-2">
+            <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe 
+                    src="https://player.vimeo.com/video/1145564097?h=0a49f3f037&title=0&byline=0&portrait=0" 
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" 
+                    frameborder="0" 
+                    allow="autoplay; fullscreen; picture-in-picture" 
+                    >
+                </iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+        </div>
+        
+        <!-- 社交媒体图标 - 垂直排列 -->
+        <div class="social-icons">
+            <a href="https://discord.gg/plantcounterattack" class="social-icon" target="_blank">
+                <i class="fab fa-discord"></i>
+            </a>
+            <a href="https://youtube.com/c/plantcounterattack" class="social-icon" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://x.com/CourtOfAwe" class="social-icon" target="_blank">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill: currentColor;">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+            </a>
+            <a href="https://tiktok.com/@plantcounterattack" class="social-icon" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+            <a href="https://www.instagram.com/courtofawe/" class="social-icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>        
+    </section>
+
+    <!-- 游戏截图区域 -->
+    <section id="screenshots" class="screenshots">
+        <div class="container">
+            <div class="section-header fade-in">
+                <div class="section-subtitle" data-i18n="screenshots.subtitle">VISUAL FEAST</div>
+                <h2 class="section-title" data-i18n="screenshots.title">Game Screenshots</h2>
+            </div>
+            
+            <div class="screenshots-grid">
+                <!-- 截图1 -->
+                <div class="screenshot-card fade-in">
+                    <img src="./src/images/screenshots/img1.png"  class="screenshot-img" data-i18n="screenshots.image1" title="Plant Defense Position">
+                   
+                </div>
+                
+                <!-- 截图2 -->
+                <div class="screenshot-card fade-in delay-1">
+                    <img src="./src/images/screenshots/img2.png"  class="screenshot-img" data-i18n="screenshots.image2" title="Intense Battle Scene">
+                    
+                </div>
+                
+                <!-- 截图3 -->
+                <div class="screenshot-card fade-in delay-2">
+                    <img src="./src/images/screenshots/img3.png"  class="screenshot-img" data-i18n="screenshots.image3" title="Plant Evolution System">
+                    
+                </div>
+                
+                <!-- 截图4 -->
+                <div class="screenshot-card fade-in delay-3">
+                    <img src="./src/images/screenshots/img4.png"  class="screenshot-img" data-i18n="screenshots.image4" title="Base Building Interface">
+                    
+                </div>
+                
+                <!-- 截图5（新增） -->
+                <div class="screenshot-card fade-in delay-3">
+                    <img src="./src/images/screenshots/img5.png"  class="screenshot-img" data-i18n="screenshots.image5" title="VR Gameplay Experience">
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-bottom">
+            <div class="footer-brand">
+                <div class="logo-wrapper">
+                    <img src="./src/images/Logo.png" alt="YunKe ViSion Logo" class="company-logo">
+                </div>
+                <div class="copyright-info">
+                    <p data-i18n="footer.copyright">© 2025 Plant Counter Attack. All rights reserved.</p>
+                    <div class="contact-email"  onclick="copyEmail()">
+                        <i class="fas fa-envelope email-icon"></i>
+                        <a href="mailto:zbai65986@gmail.com">zbai65986@gmail.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // ======================================
+        // 业务功能函数
+        // ======================================
+        
+        // 下载游戏
+        function downloadGame() {
+            const lang = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+            if (lang === 'zh') {
+                alert('开始下载... 在实际应用中，这里会启动游戏下载。');
+            } else {
+                alert('Download starting... This would launch the game download in a real implementation.');
+            }
+        }
+        
+        // 播放预告片
+        function playTrailer() {
+            const lang = window.i18n ? window.i18n.getCurrentLanguage() : 'en';
+            if (lang === 'zh') {
+                alert('正在打开游戏预告片... 在实际应用中，这里会播放视频。');
+            } else {
+                alert('Opening game trailer... This would play a video in a real implementation.');
+            }
+        }
+        
+        // 滚动到特色功能区域
+        function scrollToFeatures() {
+            document.getElementById('features').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+        // 复制邮箱
+        function copyEmail() {
+            const email = 'zbai65986@gmail.com';
+            navigator.clipboard.writeText(email).then(() => {
+                alert('Email copied to clipboard: ' + email);
+            });
+        }
+                // ======================================
+        // 页面初始化
+        // ======================================
+        document.addEventListener('DOMContentLoaded', function() {
+            // 1. 初始化多语言系统
+            if (window.i18n && window.i18n.init) {
+                window.i18n.init();
+            }
+            
+            // 2. 语言下拉框事件监听
+            const langSelect = document.getElementById('langSelect');
+            if (langSelect && window.i18n) {
+                langSelect.addEventListener('change', function(e) {
+                    window.i18n.switchLanguage(e.target.value);
+                });
+            }
+            
+            // 3. 平滑滚动导航
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ 
+                            behavior: 'smooth' 
+                        });
+                        
+                        // 更新导航链接状态
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                    }
+                });
+            });
+            
+            // 4. 滚动时高亮导航
+            window.addEventListener('scroll', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('.nav-link');
+                
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (scrollY >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+            });
+            
+            // 5. 添加滚动动画
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, observerOptions);
+            
+            // 观察所有需要动画的元素
+            document.querySelectorAll('.screenshot-card, .section-header').forEach(el => {
+                observer.observe(el);
+            });
+            
+            // 6. 初始化默认激活第一个导航链接
+            const firstNavLink = document.querySelector('.nav-link');
+            if (firstNavLink) {
+                firstNavLink.classList.add('active');
+            }
+            
+            // 7. 优化视频容器的aspect-ratio兼容性
+            const videoContainers = document.querySelectorAll('.video-container');
+            videoContainers.forEach(container => {
+                const innerDiv = container.querySelector('div');
+                if (innerDiv) {
+                    innerDiv.style.padding = '0';
+                }
+            });
+        });
+        
+        // 8. 错误处理：如果i18n.js加载失败，提供后备方案
+        if (typeof window.i18n === 'undefined') {
+            console.warn('i18n.js 未正确加载，使用后备方案');
+            window.i18n = {
+                currentLang: 'en',
+                getCurrentLanguage: () => 'en',
+                switchLanguage: () => console.warn('i18n功能不可用'),
+                init: () => console.warn('i18n功能不可用')
+            };
+        }
+    </script>
+</body>
+</html>
